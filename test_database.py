@@ -46,10 +46,10 @@ def initial_setup(exercício):
 class DatabaseTestCase(unittest.TestCase):
     def setUp(self):
         db_file = Path.cwd() / DB_FILENAME
-        try:
-            db_file.unlink()  # Apaga o arquivo, caso exista (TODO não funciona em alguns windows)
-        except FileNotFoundError:
-            pass
+        # try:
+        #     db_file.unlink()  # Apaga o arquivo, caso exista (TODO não funciona em alguns windows)
+        # except FileNotFoundError:
+        #     pass
 
     @initial_setup("EXERCÍCIO 01")
     def test_1_connect_on_init(self):
